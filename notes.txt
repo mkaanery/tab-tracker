@@ -1,3 +1,17 @@
 nvm
+
 npm
+
 vue-cli
+
+generate express package (server folder. npm init -f, npm install --save nodemon eslint)
+
+added to package.json of server in scripts:
+"start": "./node_modules/nodemon/bin/nodemon.js src/app.js --exec 'npm run lint && node'",
+"lint": "./node_modules/.bin/eslint **/*.js"
+
+run eslint.js in bin folder of eslint in node_modules
+
+npm install --save express body-parser cors morgan
+
+require those modules
