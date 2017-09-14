@@ -4,13 +4,22 @@ npm
 
 vue-cli
 
-generate express package (server folder. npm init -f, npm install --save nodemon eslint)
 
-added to package.json of server in scripts:
+how to set up a server:
+mkdir server
+cd server
+npm init -f
+npm install --save nodemon eslint
+add to package.json of server in scripts:
 "start": "./node_modules/nodemon/bin/nodemon.js src/app.js --exec 'npm run lint && node'",
 "lint": "./node_modules/.bin/eslint **/*.js"
 
-run eslint.js in bin folder of eslint in node_modules
+define a web app in /src/app.js
+
+init eslint:
+node node_modules/eslint/bin/eslint.js --init
+
+moved eslint and nodemon dependencies to devDependencies in packagejson
 
 npm install --save express body-parser cors morgan
 
