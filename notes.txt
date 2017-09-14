@@ -1,9 +1,6 @@
 nvm
-
 npm
-
 vue-cli
-
 
 how to set up a server:
 mkdir server
@@ -31,6 +28,10 @@ move to client now:
 
 npm install --save axios
 create src/services/Api.js
+
+-------------------------------------------- v2
+in server:
+npm install --save sequelize sqlite3@3.1.8
 
 
 

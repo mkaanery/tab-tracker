@@ -21,11 +21,11 @@ export default {
   },
   methods: {
     async register () {
-      const response = await AuthenticationService.register({
+      await AuthenticationService.register({
         email: this.email,
         password: this.password
       })
-      console.log(response.data)
+      // console.log(response.data)
     }
   }
   // watch: {
