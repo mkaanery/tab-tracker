@@ -22,12 +22,15 @@ node node_modules/eslint/bin/eslint.js --init
 moved eslint and nodemon dependencies to devDependencies in packagejson
 
 npm install --save express body-parser cors morgan
+require those modules in app.js and use them
+listen a port and set end points with get/post etc.
 
-require those modules in app.js
+------------------
 
-in client: npm install --save axios
+move to client now:
+
+npm install --save axios
 create src/services/Api.js
 
-<img src="./assets/logo.png"> deleted from main App.vue
 
 
