@@ -1,18 +1,28 @@
 <template>
   <div id="app">
+    <v-app fluid>
+      <page-header></page-header>
+      <main>
+       <v-container fluid>
+       <router-view></router-view>
+       </v-container>
+      </main>
+    </v-app>
     <!-- <img src="./assets/logo.png"> -->
-    s
-    <router-view></router-view>
   </div>
 </template>
 
 <script>
+import PageHeader from '@/components/Header.vue'
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    PageHeader
+  }
 }
 </script>
 
-<style scoped>
+<style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
