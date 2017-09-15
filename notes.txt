@@ -33,5 +33,9 @@ create src/services/Api.js
 in server:
 npm install --save sequelize sqlite3@3.1.8
 
+seperated the code.
+
+npm install --save joi
+policies
 
 

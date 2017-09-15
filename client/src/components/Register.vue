@@ -5,43 +5,53 @@
     <br>
     <input type="password" name="password" placeholder="password" v-model="password">
     <br>
+    <p v-html="error" id="error"></p>
+    <br>
     <button @click="register">Register</button>
   </div>
 </template>
 
 <script>
-import AuthenticationService from '@/services/AuthenticationService'
-export default {
-  name: 'register',
-  data () {
-    return {
-      email: '',
-      password: ''
+  import AuthenticationService from '@/services/AuthenticationService'
+  export default {
+    name: 'register',
+    data () {
+      return {
+        email: '',
+        password: '',
+        error: null
+      }
+    },
+    methods: {
+      async register () {
+        try {
+          await AuthenticationService.register({
+            email: this.email,
+            password: this.password
+          })
+          this.error = 'Success'
+        } catch (error) {
+          this.error = error.response.data.error
+        }
+        // console.log(response.data)
+      }
     }
-  },
-  methods: {
-    async register () {
-      await AuthenticationService.register({
-        email: this.email,
-        password: this.password
-      })
-      // console.log(response.data)
-    }
+    // watch: {
+    //   email (value) {
+    //     console.log('email has changed', value)
+    //   }
+    // },
+    // mounted () {
+    //   setTimeout(() => {
+    //     this.email = 'emailchanged'
+    //   }, 1000)
+    // }
   }
-  // watch: {
-  //   email (value) {
-  //     console.log('email has changed', value)
-  //   }
-  // },
-  // mounted () {
-  //   setTimeout(() => {
-  //     this.email = 'emailchanged'
-  //   }, 1000)
-  // }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+#error {
+  color: red;
+}
 </style>
