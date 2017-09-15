@@ -40,3 +40,17 @@ policies
 
 in client:
 npm install --save vuetify
+
+--------------------------------------------- v3
+
+styling
+register and login.
+User.findOne
+
+npm install --save jsonwebtoken
+npm install --save bcrypt-nodejs
+npm install --save bluebird
+
+hashing and stuff
+
+wrapped input fields in register with form
