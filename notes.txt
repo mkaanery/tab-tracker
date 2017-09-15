@@ -38,4 +38,5 @@ seperated the code.
 npm install --save joi
 policies
 
-
+in client:
+npm install --save vuetify
