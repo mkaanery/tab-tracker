@@ -39,8 +39,9 @@ export default {
       this.$router.push(route)
     },
     logout () {
-      this.$store.state.dispatch('setToken', null)
-      this.$store.state.dispatch('setUser', null)
+      this.$store.dispatch('setToken', null)
+      this.$store.dispatch('setUser', null)
+      this.navigateTo({name: 'root'})
     }
   }
 }
