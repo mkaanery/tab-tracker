@@ -48,10 +48,12 @@
     methods: {
       async register () {
         try {
-          await AuthenticationService.register({
+          const response = await AuthenticationService.register({
             email: this.email,
             password: this.password
           })
+          this.$store.dispatch('setToken', response.data.token)
+          this.$store.dispatch('setUser', response.data.user)
           this.error = 'Success'
         } catch (error) {
           this.error = error.response.data.error

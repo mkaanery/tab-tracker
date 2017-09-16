@@ -54,3 +54,7 @@ npm install --save bluebird
 hashing and stuff
 
 wrapped input fields in register with form
+
+in client:
+npm install --save vuex
+npm install --save vuex-router-sync
