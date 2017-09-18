@@ -13,15 +13,23 @@ module.exports = {
       })
     }
   },
-
   async post (req, res) {
     try {
       const song = await Song.create(req.body)
-      // console.log("----------------")
       res.send(song)
     } catch (err) {
       res.status(500).send({
         error: 'An error has occured trying to create a song'
+      })
+    }
+  },
+  async show (req, res) {
+    try {
+      const song = await Song.findById(req.params.songId)
+      res.send(song)
+    } catch (err) {
+      res.status(500).send({
+        error: 'An error has occured trying to show a song'
       })
     }
   }

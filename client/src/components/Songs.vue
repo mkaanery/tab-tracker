@@ -38,7 +38,7 @@
           </v-flex>
 
           <v-flex xs6>
-            <img class="song-image" :src="song.albumimageUrl">
+            <img class="song-image" :src="song.albumImageUrl">
           </v-flex>
         </v-layout>
       </div>
@@ -89,7 +89,7 @@ export default {
 }
 
 .album-image {
-  widows: 70%;
+  width: 70%;
   margin: 0, auto;
 }
 </style>
